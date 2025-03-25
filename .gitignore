@@ -61,5 +61,8 @@ profile*
 examples/typescript-server.js
 test/types/index.js
 
+# env files (can opt-in for committing if needed)
+.env
+
 # compiled app
 dist
