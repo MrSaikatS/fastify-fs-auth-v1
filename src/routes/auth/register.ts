@@ -41,6 +41,7 @@ const register: FastifyPluginAsyncTypebox = async (fastify): Promise<void> => {
           where: {
             email: normalizedEmail,
           },
+
           select: {
             id: true, // Only fetch ID to minimize unnecessary data retrieval
           },
@@ -76,7 +77,7 @@ const register: FastifyPluginAsyncTypebox = async (fastify): Promise<void> => {
         fastify.log.error(error);
 
         // Generic error response to avoid leaking sensitive information
-        return reply.internalServerError("Failed to register user");
+        return reply.internalServerError("User Registration Failed");
       }
     },
   });
