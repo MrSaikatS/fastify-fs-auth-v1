@@ -46,6 +46,12 @@ const login: FastifyPluginAsyncTypebox = async (fastify): Promise<void> => {
         if (!isPasswordCorrect) {
           return reply.unauthorized("Incorrect password");
         }
+
+        if (existingUser.token !== null && existingUser.token !== "") {
+          return reply.setCookie("FAT", existingUser.token).code(201).send({
+            message: "User login successful",
+          });
+        }
       } catch (error) {
         fastify.log.error(error);
 
