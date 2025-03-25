@@ -3,6 +3,7 @@ import {
   Type,
 } from "@fastify/type-provider-typebox";
 import { verify } from "argon2";
+import env from "../../utils/env";
 
 const login: FastifyPluginAsyncTypebox = async (fastify): Promise<void> => {
   fastify.route({
@@ -50,7 +51,13 @@ const login: FastifyPluginAsyncTypebox = async (fastify): Promise<void> => {
         }
 
         // Verify password using Argon2 (constant-time comparison)
-        const isPasswordCorrect = await verify(existingUser.password, password);
+        const isPasswordCorrect = await verify(
+          existingUser.password,
+          password,
+          {
+            secret: Buffer.from(env.APP_SECRET),
+          }
+        );
 
         // Reject login if password is incorrect
         if (!isPasswordCorrect) {
