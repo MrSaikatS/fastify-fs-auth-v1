@@ -6,6 +6,7 @@
       "dependencies": {
         "@fastify/autoload": "6.0.0",
         "@fastify/cors": "^11.0.0",
+        "@fastify/etag": "^6.0.3",
         "@fastify/sensible": "6.0.0",
         "@fastify/type-provider-typebox": "5.1.0",
         "@prisma/client": "^6.5.0",
@@ -91,6 +92,8 @@
     "@fastify/deepmerge": ["@fastify/deepmerge@2.0.2", "", {}, "sha512-3wuLdX5iiiYeZWP6bQrjqhrcvBIf0NHbQH1Ur1WbHvoiuTYUEItgygea3zs8aHpiitn0lOB8gX20u1qO+FDm7Q=="],
 
     "@fastify/error": ["@fastify/error@4.1.0", "", {}, "sha512-KeFcciOr1eo/YvIXHP65S94jfEEqn1RxTRBT1aJaHxY5FK0/GDXYozsQMMWlZoHgi8i0s+YtrLsgj/JkUUjSkQ=="],
+
+    "@fastify/etag": ["@fastify/etag@6.0.3", "", { "dependencies": { "fastify-plugin": "^5.0.0" } }, "sha512-pMXohCA6Bk9JBNLl/KhHkSCGN7PCbgwVqHydwMsd1sVKtV8YNuzRW7lEe1VYap/MTNOn/Q8OfcR667lyrNbT/A=="],
 
     "@fastify/fast-json-stringify-compiler": ["@fastify/fast-json-stringify-compiler@5.0.2", "", { "dependencies": { "fast-json-stringify": "^6.0.0" } }, "sha512-YdR7gqlLg1xZAQa+SX4sMNzQHY5pC54fu9oC5aYSUqBhyn6fkLkrdtKlpVdCNPlwuUuXA1PjFTEmvMF6ZVXVGw=="],
 
