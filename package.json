@@ -32,7 +32,7 @@
     "fastify-plugin": "5.0.0"
   },
   "devDependencies": {
-    "@types/node": "22.1.0",
+    "@types/node": "22.13.14",
     "c8": "10.1.2",
     "concurrently": "9.0.0",
     "fastify-tsconfig": "2.0.0",
