@@ -13,10 +13,9 @@ export default fp<FastifyCookieOptions>(async (fastify) => {
     secret: env.APP_SECRET,
     parseOptions: {
       httpOnly: true,
-      sameSite: "none",
+      sameSite: "lax",
       secure: "auto",
       path: "/",
-      signed: true,
     },
   });
 });

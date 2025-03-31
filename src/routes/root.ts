@@ -8,6 +8,20 @@ const root: FastifyPluginAsyncTypebox = async (fastify): Promise<void> => {
 
     schema: {},
 
+    onRequest: async (request, reply) => {
+      const { FAT } = request.cookies;
+
+      try {
+        if (FAT === undefined) {
+          await request.jwtVerify();
+        } else {
+          fastify.jwt.verify(FAT);
+        }
+      } catch (error) {
+        reply.unauthorized("Unauthorized");
+      }
+    },
+
     handler: async (request, reply) => {
       reply.send({ root: true });
     },

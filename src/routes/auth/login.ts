@@ -5,6 +5,11 @@ import {
 import { verify } from "argon2";
 import env from "../../utils/env";
 
+/**
+ * User login route handler
+ * Manages user authentication, token generation, and session management
+ */
+
 const login: FastifyPluginAsyncTypebox = async (fastify): Promise<void> => {
   fastify.route({
     method: "POST", // HTTP method for user login

@@ -2,7 +2,7 @@ import fastifyCors, { FastifyCorsOptions } from "@fastify/cors";
 import fp from "fastify-plugin";
 
 /**
- * This plugins adds some utilities to handle cors
+ * This plugins enables the use of CORS in a Fastify application.
  *
  * @see https://github.com/fastify/fastify-cors
  */

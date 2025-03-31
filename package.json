@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@fastify/autoload": "6.0.0",
+    "@fastify/compress": "^8.0.1",
     "@fastify/cookie": "^11.0.2",
     "@fastify/cors": "^11.0.0",
     "@fastify/etag": "^6.0.3",

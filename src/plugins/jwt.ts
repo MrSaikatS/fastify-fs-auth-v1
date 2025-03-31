@@ -3,7 +3,7 @@ import fp from "fastify-plugin";
 import env from "../utils/env";
 
 /**
- * This plugins adds some utilities to handle http errors
+ * This plugins adds JWT utils for Fastify, internally it uses fast-jwt.
  *
  * @see https://github.com/fastify/fastify-jwt
  */
@@ -11,6 +11,15 @@ import env from "../utils/env";
 export default fp<FastifyJWTOptions>(async (fastify) => {
   fastify.register(fastifyJwt, {
     secret: env.APP_SECRET,
+    decode: {
+      complete: true,
+    },
+    sign: {
+      iss: "fstAuth",
+    },
+    verify: {
+      allowedIss: "fstAuth",
+    },
     cookie: {
       cookieName: "FAT",
       signed: true,
