@@ -20,7 +20,7 @@
     "@fastify/cors": "11.0.0",
     "@fastify/etag": "6.0.3",
     "@fastify/jwt": "9.1.0",
-    "@fastify/sensible": "6.0.0",
+    "@fastify/sensible": "6.0.3",
     "@fastify/type-provider-typebox": "5.1.0",
     "@prisma/client": "6.5.0",
     "argon2": "0.41.1",
