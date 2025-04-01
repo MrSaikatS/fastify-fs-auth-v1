@@ -16,7 +16,7 @@
         "argon2": "0.41.1",
         "fastify": "5.0.0",
         "fastify-cli": "7.3.0",
-        "fastify-plugin": "5.0.0",
+        "fastify-plugin": "5.0.1",
       },
       "devDependencies": {
         "@types/node": "22.1.0",
@@ -257,7 +257,7 @@
 
     "fastify-cli": ["fastify-cli@7.3.0", "", { "dependencies": { "@fastify/deepmerge": "^2.0.0", "chalk": "^4.1.2", "chokidar": "^4.0.0", "close-with-grace": "^2.1.0", "commist": "^3.0.0", "dotenv": "^16.0.0", "fastify": "^5.0.0", "fastify-plugin": "^5.0.0", "generify": "^4.0.0", "help-me": "^4.0.1", "is-docker": "^2.0.0", "pino-pretty": "^11.2.0", "pkg-up": "^3.1.0", "resolve-from": "^5.0.0", "semver": "^7.3.5", "yargs-parser": "^21.1.1" }, "bin": { "fastify": "cli.js" } }, "sha512-4QMW3VeCxysR0E/Hc1MA69G61LENeKdlaLymOUH5uFWPczKMC3Ngzr9A/zWfrzeSF47SOp/SZOLgdauRkGh8xg=="],
 
-    "fastify-plugin": ["fastify-plugin@5.0.0", "", {}, "sha512-0725fmH/yYi8ugsjszLci+lLnGBK6cG+WSxM7edY2OXJEU7gr2JiGBoieL2h9mhTych1vFsEfXsAsGGDJ/Rd5w=="],
+    "fastify-plugin": ["fastify-plugin@5.0.1", "", {}, "sha512-HCxs+YnRaWzCl+cWRYFnHmeRFyR5GVnJTAaCJQiYzQSDwK9MgJdyAsuL3nh0EWRCYMgQ5MeziymvmAhUHYHDUQ=="],
 
     "fastify-tsconfig": ["fastify-tsconfig@2.0.0", "", {}, "sha512-pvYwdtbZUJr/aTD7ZE0rGlvtYpx7IThHKVLBoqCKmT3FJpwm23XA2+PDmq8ZzfqqG4ajpyrHd5bkIixcIFjPhQ=="],
 
@@ -485,9 +485,23 @@
 
     "yn": ["yn@3.1.1", "", {}, "sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q=="],
 
+    "@fastify/compress/fastify-plugin": ["fastify-plugin@5.0.0", "", {}, "sha512-0725fmH/yYi8ugsjszLci+lLnGBK6cG+WSxM7edY2OXJEU7gr2JiGBoieL2h9mhTych1vFsEfXsAsGGDJ/Rd5w=="],
+
+    "@fastify/cookie/fastify-plugin": ["fastify-plugin@5.0.0", "", {}, "sha512-0725fmH/yYi8ugsjszLci+lLnGBK6cG+WSxM7edY2OXJEU7gr2JiGBoieL2h9mhTych1vFsEfXsAsGGDJ/Rd5w=="],
+
+    "@fastify/cors/fastify-plugin": ["fastify-plugin@5.0.0", "", {}, "sha512-0725fmH/yYi8ugsjszLci+lLnGBK6cG+WSxM7edY2OXJEU7gr2JiGBoieL2h9mhTych1vFsEfXsAsGGDJ/Rd5w=="],
+
+    "@fastify/etag/fastify-plugin": ["fastify-plugin@5.0.0", "", {}, "sha512-0725fmH/yYi8ugsjszLci+lLnGBK6cG+WSxM7edY2OXJEU7gr2JiGBoieL2h9mhTych1vFsEfXsAsGGDJ/Rd5w=="],
+
+    "@fastify/jwt/fastify-plugin": ["fastify-plugin@5.0.0", "", {}, "sha512-0725fmH/yYi8ugsjszLci+lLnGBK6cG+WSxM7edY2OXJEU7gr2JiGBoieL2h9mhTych1vFsEfXsAsGGDJ/Rd5w=="],
+
+    "@fastify/sensible/fastify-plugin": ["fastify-plugin@5.0.0", "", {}, "sha512-0725fmH/yYi8ugsjszLci+lLnGBK6cG+WSxM7edY2OXJEU7gr2JiGBoieL2h9mhTych1vFsEfXsAsGGDJ/Rd5w=="],
+
     "chalk/supports-color": ["supports-color@7.2.0", "", { "dependencies": { "has-flag": "^4.0.0" } }, "sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw=="],
 
     "duplexify/readable-stream": ["readable-stream@2.3.8", "", { "dependencies": { "core-util-is": "~1.0.0", "inherits": "~2.0.3", "isarray": "~1.0.0", "process-nextick-args": "~2.0.0", "safe-buffer": "~5.1.1", "string_decoder": "~1.1.1", "util-deprecate": "~1.0.1" } }, "sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA=="],
+
+    "fastify-cli/fastify-plugin": ["fastify-plugin@5.0.0", "", {}, "sha512-0725fmH/yYi8ugsjszLci+lLnGBK6cG+WSxM7edY2OXJEU7gr2JiGBoieL2h9mhTych1vFsEfXsAsGGDJ/Rd5w=="],
 
     "help-me/readable-stream": ["readable-stream@3.6.2", "", { "dependencies": { "inherits": "^2.0.3", "string_decoder": "^1.1.1", "util-deprecate": "^1.0.1" } }, "sha512-9u/sniCrY3D5WdsERHzHE4G2YCXqoG5FTHUiCC4SIbr6XcLZBY05ya9EKjYek9O5xOAwjGq+1JdGBAS7Q9ScoA=="],
 
