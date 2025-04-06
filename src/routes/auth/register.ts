@@ -3,7 +3,7 @@ import {
   Type,
 } from "@fastify/type-provider-typebox";
 import { argon2id, hash } from "argon2";
-import env from "../../utils/env";
+import env from "../../utils/env.js";
 
 /**
  * User registration route handler

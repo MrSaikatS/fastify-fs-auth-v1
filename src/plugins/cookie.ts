@@ -1,6 +1,6 @@
 import fastifyCookie, { FastifyCookieOptions } from "@fastify/cookie";
 import fp from "fastify-plugin";
-import env from "../utils/env";
+import env from "../utils/env.js";
 
 /**
  * This plugins adds some utilities to handle cookie

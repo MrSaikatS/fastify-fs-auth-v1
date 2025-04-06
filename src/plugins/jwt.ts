@@ -1,6 +1,6 @@
 import fastifyJwt, { FastifyJWTOptions } from "@fastify/jwt";
 import fp from "fastify-plugin";
-import env from "../utils/env";
+import env from "../utils/env.js";
 
 /**
  * This plugins adds JWT utils for Fastify, internally it uses fast-jwt.

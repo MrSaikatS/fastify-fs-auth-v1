@@ -3,7 +3,7 @@ import {
   Type,
 } from "@fastify/type-provider-typebox";
 import { verify } from "argon2";
-import env from "../../utils/env";
+import env from "../../utils/env.js";
 
 /**
  * User login route handler
