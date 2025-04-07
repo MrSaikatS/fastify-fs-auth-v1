@@ -30,7 +30,7 @@ const upload: FastifyPluginAsyncTypebox = async (fastify): Promise<void> => {
       const fileData = await request.file();
 
       if (fileData === undefined) {
-        return reply.code(400).send({ error: "No file uploaded" });
+        return reply.badRequest("No file uploaded");
       }
 
       const fileId = v4();
@@ -41,10 +41,12 @@ const upload: FastifyPluginAsyncTypebox = async (fastify): Promise<void> => {
 
       await pipeline(
         fileData.file,
-        createWriteStream(`./uploads/${sanitizedFileName}`)
+        createWriteStream(`./assets/${sanitizedFileName}`)
       );
 
-      return reply.send({ root: true });
+      return reply.code(201).send({
+        message: `File ${sanitizedFileName} uploaded successfully`,
+      });
     },
   });
 };

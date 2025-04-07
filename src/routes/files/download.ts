@@ -3,12 +3,9 @@ import {
   Type,
 } from "@fastify/type-provider-typebox";
 
-const serveFiles: FastifyPluginAsyncTypebox = async (
-  fastify
-): Promise<void> => {
+const download: FastifyPluginAsyncTypebox = async (fastify): Promise<void> => {
   fastify.route({
     method: "GET",
-
     url: "/:fileId",
 
     schema: {
@@ -20,11 +17,9 @@ const serveFiles: FastifyPluginAsyncTypebox = async (
     handler: async (request, reply) => {
       const { fileId } = request.params;
 
-      console.log(fileId);
-
-      reply.sendFile(fileId);
+      return reply.download(fileId);
     },
   });
 };
 
-export default serveFiles;
+export default download;
