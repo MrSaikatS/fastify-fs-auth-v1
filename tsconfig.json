@@ -2,8 +2,7 @@
   "extends": "fastify-tsconfig",
   "compilerOptions": {
     "outDir": "dist",
-    "sourceMap": false,
-    "target": "ESNext"
+    "sourceMap": false
   },
   "include": ["src/**/*.ts"]
 }

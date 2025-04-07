@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "This project was bootstrapped with Fastify-CLI.",
   "main": "app.ts",
-  "type": "module",
   "scripts": {
     "start": "npm run build:ts && fastify start -l info dist/app.js",
     "build:ts": "tsc",
@@ -29,10 +28,11 @@
     "fastify": "5.2.2",
     "fastify-cli": "7.4.0",
     "fastify-plugin": "5.0.1",
-    "file-type": "20.4.1",
-    "nanoid": "5.1.5"
+    "mime-types": "3.0.1",
+    "uuid": "11.1.0"
   },
   "devDependencies": {
+    "@types/mime-types": "2.1.4",
     "@types/node": "22.14.0",
     "concurrently": "9.1.2",
     "fastify-tsconfig": "3.0.0",

@@ -1,7 +1,8 @@
 import { FastifyPluginAsyncTypebox } from "@fastify/type-provider-typebox";
-// import { createWriteStream } from "node:fs";
-// import { pipeline } from "node:stream/promises";
-import { fileTypeFromFile } from "file-type";
+import { extension } from "mime-types";
+import { createWriteStream } from "node:fs";
+import { pipeline } from "node:stream/promises";
+import { v4 } from "uuid";
 
 const upload: FastifyPluginAsyncTypebox = async (fastify): Promise<void> => {
   fastify.route({
@@ -32,13 +33,18 @@ const upload: FastifyPluginAsyncTypebox = async (fastify): Promise<void> => {
         return reply.code(400).send({ error: "No file uploaded" });
       }
 
-      const fileExt = await fileTypeFromFile(fileData.filename);
+      const fileId = v4();
 
-      //   await pipeline(fileData.file, createWriteStream("abcd", {}));
+      const fileExt = extension(fileData.mimetype);
 
-      console.log(fileExt);
+      const sanitizedFileName = `${fileId}.${fileExt}`;
 
-      reply.send({ root: true });
+      await pipeline(
+        fileData.file,
+        createWriteStream(`./uploads/${sanitizedFileName}`)
+      );
+
+      return reply.send({ root: true });
     },
   });
 };
