@@ -20,3 +20,8 @@ model UserAccount {
 
   @@index([id, email])
 }
+
+model FileAsset {
+  id       String @id @unique
+  fileName String
+}

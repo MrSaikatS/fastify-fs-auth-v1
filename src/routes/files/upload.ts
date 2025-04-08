@@ -33,20 +33,33 @@ const upload: FastifyPluginAsyncTypebox = async (fastify): Promise<void> => {
         return reply.badRequest("No file uploaded");
       }
 
-      const fileId = v4();
+      try {
+        const fileId = v4();
 
-      const fileExt = extension(fileData.mimetype);
+        const fileExt = extension(fileData.mimetype);
 
-      const sanitizedFileName = `${fileId}.${fileExt}`;
+        const sanitizedFileName = `${fileId}.${fileExt}`;
 
-      await pipeline(
-        fileData.file,
-        createWriteStream(`./assets/${sanitizedFileName}`)
-      );
+        await pipeline(
+          fileData.file,
+          createWriteStream(`./assets/${sanitizedFileName}`)
+        );
 
-      return reply.code(201).send({
-        message: `File ${sanitizedFileName} uploaded successfully`,
-      });
+        const { id, fileName } = await fastify.prisma.fileAsset.create({
+          data: {
+            id: fileId,
+            fileName: sanitizedFileName,
+          },
+        });
+
+        return reply.code(201).send({ id, fileName });
+      } catch (error) {
+        // Log any unexpected errors for debugging
+        fastify.log.error(error);
+
+        // Generic error response to prevent information leakage
+        return reply.internalServerError("File Upload Failed");
+      }
     },
   });
 };
