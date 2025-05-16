@@ -22,7 +22,7 @@
     "@fastify/jwt": "9.1.0",
     "@fastify/sensible": "6.0.3",
     "@fastify/type-provider-typebox": "5.1.0",
-    "@prisma/client": "6.5.0",
+    "@prisma/client": "6.8.2",
     "argon2": "0.41.1",
     "fastify": "5.2.2",
     "fastify-cli": "7.4.0",
@@ -32,7 +32,7 @@
     "@types/node": "22.14.0",
     "concurrently": "9.1.2",
     "fastify-tsconfig": "3.0.0",
-    "prisma": "6.5.0",
+    "prisma": "6.8.2",
     "ts-node": "10.9.2",
     "typescript": "5.8.3"
   },
